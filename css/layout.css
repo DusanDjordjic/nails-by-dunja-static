@@ -1,0 +1,52 @@
+.container {
+    padding: 0 16px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+header {
+    position: sticky;
+    top: 0;
+    padding: 16px 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--color-bg);
+}
+
+header .header_logo {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header_layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header_links a {
+    text-decoration: none;
+}

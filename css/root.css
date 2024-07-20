@@ -1,0 +1,70 @@
+:root {
+    --color-bg: #fff7fb;
+    --color-text: #1d1c1c;
+    --color-primary: #ff4656;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+a {
+    color: inherit;
+    text-transform: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.font-playfair-400 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-playfair-500 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-playfair-600 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.font-playfair-700 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-playwrite-300 {
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

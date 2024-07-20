@@ -34,7 +34,7 @@ def clean_and_rename(folder_path):
     # Initialize a counter for renaming jpg files
     jpg_count = 0
     
-    files =  sorted(files, reverse=True)
+    files = sorted(files, reverse=True)
     for file in files:
         if file.endswith('.jpg'):
             jpg_count += 1
@@ -75,9 +75,9 @@ def clean_and_rename(folder_path):
             output_path_webm = f'nails_by_dunja_post_{jpg_count}.webm'
             
             video = f''' <video autoplay muted loop playsinline>
+                <source src="./posts/{output_path_webm}" type="video/webm">
+                <source src="./posts/{output_path_ogg}" type="video/ogg">
                 <source src="./posts/{output_path_mp4}" type="video/mp4">
-                 <source src="./posts/{output_path_ogg}" type="video/ogg">
-                  <source src="./posts/{output_path_webm}" type="video/webm">
                 Your browser does not support HTML5 video.
                 </video>'''
             images.append(video)
@@ -91,7 +91,71 @@ def clean_and_rename(folder_path):
 
     print(f'Process completed. Renamed {jpg_count} .jpg files.')
 
+checked = []
+def load_all_files(folder_path):
+    os.chdir(folder_path)
+
+    files = os.listdir()
+    files = sorted(files)
+    for file in files:
+        if file.endswith('.webp'):
+            img = f'<img src="./posts/{file}" />'
+            images.append(img)
+        elif file.endswith('.mp4'):
+            check = os.path.splitext(file)[0]
+            if check in checked:
+                continue
+
+            checked.append(check)
+            x = file.replace(".mp4", ".webm")
+            y = file.replace(".mp4", ".ogg")
+            video = f''' <video autoplay muted loop playsinline>
+            <source src="./posts/{x}" type="video/webm">
+            <source src="./posts/{y}" type="video/ogg">
+            <source src="./posts/{file}" type="video/mp4">
+            Your browser does not support HTML5 video.
+            </video>'''
+            images.append(video)
+        elif file.endswith('.ogg'):
+            check = os.path.splitext(file)[0]
+            if check in checked:
+                continue
+
+            checked.append(check)
+            x = file.replace(".ogg", ".webm")
+            y = file.replace(".ogg", ".mp4")
+            video = f''' <video autoplay muted loop playsinline>
+            <source src="./posts/{x}" type="video/webm">
+            <source src="./posts/{file}" type="video/ogg">
+            <source src="./posts/{y}" type="video/mp4">
+            Your browser does not support HTML5 video.
+            </video>'''
+            images.append(video)
+        elif file.endswith('.webm'):
+            check = os.path.splitext(file)[0]
+            if check in checked:
+                continue
+
+            checked.append(check)
+            x = file.replace(".webm", ".ogg")
+            y = file.replace(".webm", ".mp4")
+            video = f''' <video autoplay muted loop playsinline>
+            <source src="./posts/{file}" type="video/webm">
+            <source src="./posts/{x}" type="video/ogg">
+            <source src="./posts/{y}" type="video/mp4">
+            Your browser does not support HTML5 video.
+            </video>'''
+            images.append(video)
+        
+    os.chdir('..')
+
 def replace_and_write(input_file, output_file, text):
+    if len(images) == 0:
+        load_all_files("posts")
+        text = "".join(images)
+
+
+    print(os.getcwd())
     # Read the entire content of the input file into a string
     with open(input_file, 'r') as f:
         file_content = f.read()
@@ -105,7 +169,10 @@ def replace_and_write(input_file, output_file, text):
 
     print(f"Created {output_file}")
 
-download_all(posts_file_path)
-clean_and_rename(posts_file_path)
-os.chdir("..")
+# download_all(posts_file_path)
+# clean_and_rename(posts_file_path)
+# os.chdir("..")
+
+
+    
 replace_and_write("galerija_template.html", "galerija.html", "".join(images))

@@ -1,5 +1,9 @@
-.hero {
-    padding: 200px 0;
+section {
+    padding-top: 100px;
+}
+
+section.hero {
+    padding-top: 200px;
 }
 
 .hero_layout {
@@ -41,10 +45,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    .hero {
-        min-height: 100vh;
-    }
-
     .hero_layout {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -56,5 +56,140 @@
     .hero_right img {
         max-height: unset;
         aspect-ratio: 1;
+    }
+}
+
+.cenovnik h2 {
+    text-align: center;
+}
+
+.galerija h2 {
+    text-align: center;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.images-grid img,
+.images-grid video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-position: center;
+}
+
+.images-grid video {
+    height: 100%;
+    grid-row: span 2;
+    aspect-ratio: 1 / 2;
+}
+
+@media only screen and (min-width: 768px) {
+    .images-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .images-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.cene {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    font-size: 16px;
+}
+
+.cene ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cene ul li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cene ul li ul {
+    padding-left: 32px;
+    width: 100%;
+}
+
+.cene ul li small {
+    width: 100%;
+    text-align: right;
+    margin-left: auto;
+    color: var(--color-gray);
+}
+
+.cene .price {
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+    .cene {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cene {
+        font-size: 24px;
+    }
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.contact__info .icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 100rem;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__info i {
+    font-size: 24px;
+}
+
+.contact__info .text {
+    color: var(--color-gray);
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contact__info {
+        justify-content: center;
     }
 }

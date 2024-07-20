@@ -20,6 +20,7 @@
         />
         <link rel="stylesheet" href="css/root.css" />
         <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/button.css" />
         <link rel="stylesheet" href="css/index.css" />
         <script
@@ -31,22 +32,22 @@
         <header>
             <div class="container">
                 <div class="header_layout">
-                    <a href="/" class="header_logo font-playwrite-300"
+                    <a href="index.html" class="header_logo font-playwrite-300"
                         >Nails By Dunja</a
                     >
                     <nav>
                         <ul class="header_links">
                             <li>
-                                <a href="#usluge">Usluge</a>
+                                <a href="index.html">Početna</a>
                             </li>
                             <li>
-                                <a href="#o-nama">O Nama</a>
+                                <a href="index.html#cenovnik">Cenovnik</a>
                             </li>
                             <li>
                                 <a href="./galerija.html">Galerija</a>
                             </li>
                             <li>
-                                <a href="#kontakt">Kontakt</a>
+                                <a href="index.html#kontakt">Kontakt</a>
                             </li>
                         </ul>
                     </nav>
@@ -63,7 +64,7 @@
         <aside id="sidebar">
             <div class="sidebar_header">
                 <div class="header_layout">
-                    <a href="/" class="header_logo font-playwrite-300"
+                    <a href="index.html" class="header_logo font-playwrite-300"
                         >Nails By Dunja</a
                     >
                 <button id="close-sidebar" class="icon-button"><i class="fa-sharp fa-solid fa-xmark"></i></button> 
@@ -72,16 +73,16 @@
             <h3 class="font-playfair-700">Navigacija</h3>
             <ul class="navigation">
                 <li>
-                    <a href="#usluge">Usluge</a>
+                    <a href="index.html">Početna</a>
                 </li>
                 <li>
-                    <a href="#o-nama">O Nama</a>
+                    <a href="index.html#cenovnik">Cenovnik</a>
                 </li>
                 <li>
                     <a href="./galerija.html">Galerija</a>
                 </li>
                 <li>
-                    <a href="#kontakt">Kontakt</a>
+                    <a href="index.html#kontakt">Kontakt</a>
                 </li>
             </ul>
             <h3 class="font-playfair-700">Zapratite Me</h3>
@@ -90,7 +91,6 @@
                     <a class="icon-button" href="https://www.instagram.com/nails.by_dunja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </li>
             </ul>
-
         </aside>
         <main>
             <section class="hero">
@@ -110,8 +110,132 @@
                     </div>
                 </div>
             </section>
+            <section class="cenovnik"  id="cenovnik">
+                <div class="container">
+                    <h2 class="font-playfair-700">Cenovnik</h2>
+                    <div class="cene">
+                        <ul>
+                            <li class="push">
+                                <span>Ojačanje Rubber Bazom</span><span class="price">1500</span>
+                            </li>
+                            <li>
+                                <span>Depilacija Ruku</span><span class="price">400</span>
+                            </li>
+                            <li>
+                                <span>Izlivanje:</span>
+                                <ul>
+                                    <li><span>Kratki</span><span class="price">1800</span></li>
+                                    <li><span>Srednji</span><span class="price">2000</span></li>
+                                    <li><span>Dugi</span><span class="price">2200</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>Korekcija:</span>
+                                <ul>
+                                    <li><span>Kratki</span><span class="price">1600</span></li>
+                                    <li><span>Srednji</span><span class="price">1900</span></li>
+                                    <li><span>Dugi</span><span class="price">2000</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>Korekcija Tuđeg Rada</span><span class="price">+350</span>
+                            </li>
+                            <li>
+                                <span>Skidanje Materijala</span><span class="price">700</span>
+                            </li>
+                            <li>
+                                <span>Dizajn</span>
+                                <ul>
+                                    <li><span>French</span><span class="price">+200</span></li>
+                                    <li><span>Baby Boomer</span><span class="price">+300</span></li>
+                                    <li><span>Šaranje</span><span class="price">+100-500</span>
+                                    <small>U zavisnosti od kompleksnosti</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="galerija">
+                <div class="container">
+                    <h2 class="font-playfair-700">Poslednji Radovi</h2>
+                    <div class="images-grid">
+                        <img src="./posts/nails_by_dunja_post_1.webp" />
+                        <img src="./posts/nails_by_dunja_post_2.webp" />
+                        <img src="./posts/nails_by_dunja_post_3.webp" />
+                        <img src="./posts/nails_by_dunja_post_4.webp" />
+                    </div>
+                </div>
+            </section>
+            </section>
+            <section class="contact" id="kontakt">
+                <div class="container">
+                    <h2 class="font-playfair-700">Kontakt</h2>
+                    <div class="contact__grid">
+                        <div class="contact__info">
+                            <span class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <p class="text">
+                                +381 60 1306433
+                            </p>
+                        </div>
+                        <div class="contact__info">
+                            <span class="icon">
+                                <i class="fa-solid fa-location-pin"></i>
+                            </span>
+                            <p class="text">
+                                Ticanova 76 <br />
+                                Sremska Mitrovica, Srbija
+                            </p>
+                        </div>
+                        <div class="contact__info">
+                            <span class="icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                            <a class="text" href="https://ig.me/m/nails.by_dunja" target="_blank">DM @nails.by_dunja</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+
+        <footer>
+            <div class="container">
+                <div class="top">
+                    <div>
+                        <h3 class="font-playwrite-300">Nails By Dunja</h3>
+                        <small class="slogan font-playwrite-300">Nega noktiju kakvu zaslužujete</small>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a class="icon-button" class="text" href="https://www.instagram.com/nails.by_dunja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="middle">
+                    <nav>
+                        <ul class="footer_links">
+                            <li>
+                                <a href="index.html">Početna</a>
+                            </li>
+                            <li>
+                                <a href="index.html#cenovnik">Cenovnik</a>
+                            </li>
+                            <li>
+                                <a href="./galerija.html">Galerija</a>
+                            </li>
+                            <li>
+                                <a href="index.html#kontakt">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bottom">
+                    <small>&copy; 2024 Nails By Dunja</small>
+                </div>
+            </div>
+        </footer>
         <script  src="./js/header.js"></script>
     </body>
 </html>

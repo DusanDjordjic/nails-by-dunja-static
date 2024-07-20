@@ -2,10 +2,17 @@
     --color-bg: #fff7fb;
     --color-text: #1d1c1c;
     --color-primary: #ff4656;
+    --color-gray: #76585a;
 }
+
 * {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 html {
     margin: 0;

@@ -39,12 +39,11 @@ def clean_and_rename(folder_path):
             jpg_count += 1
             new_name = f'nails_by_dunja_post_{jpg_count}.webp'
             
-     
             os.rename(file, new_name)
        
             img =  Image.open(new_name)
             width, height = img.size
-            new_width = 250
+            new_width = 400
             new_height = int(height * new_width / width)
             img_resized = img.resize((new_width, new_height), Image.ADAPTIVE)
             img_resized.save(new_name, "webp")
@@ -57,7 +56,7 @@ def clean_and_rename(folder_path):
         #     clip = VideoFileClip(file)
 
         #     # Calculate new dimensions while maintaining aspect ratio
-        #     new_height = 500
+        #     new_height = 800
         #     ratio = new_height / clip.size[1]
         #     new_width = int(clip.size[0] * ratio)
 

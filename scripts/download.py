@@ -1,5 +1,7 @@
 import instaloader
 import os
+from PIL import Image
+
 
 images = []
 posts_file_path = 'posts'
@@ -35,10 +37,21 @@ def clean_and_rename(folder_path):
     for file in files:
         if file.endswith('.jpg'):
             jpg_count += 1
-            new_name = f'nails_by_dunja_post_{jpg_count}.jpg'
+            new_name = f'nails_by_dunja_post_{jpg_count}.webp'
+            
+     
+            os.rename(file, new_name)
+       
+            img =  Image.open(new_name)
+            width, height = img.size
+            new_width = 250
+            new_height = int(height * new_width / width)
+            img_resized = img.resize((new_width, new_height), Image.ADAPTIVE)
+            img_resized.save(new_name, "webp")
+
+        
             img = f'<img src="./posts/{new_name}" />'
             images.append(img)
-            os.rename(file, new_name)
             print(f'Renamed {file} to {new_name}')
         else:
             os.remove(file)

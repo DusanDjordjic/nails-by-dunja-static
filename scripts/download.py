@@ -1,7 +1,6 @@
 import instaloader
 import os
 from PIL import Image
-from moviepy.editor import VideoFileClip
 
 images = []
 posts_file_path = 'posts'
@@ -54,37 +53,37 @@ def clean_and_rename(folder_path):
             img = f'<img src="./posts/{new_name}" />'
             images.append(img)
             print(f'Renamed {file} to {new_name}')
-        elif file.endswith('.mp4'):
-            clip = VideoFileClip(file)
+        # elif file.endswith('.mp4'):
+        #     clip = VideoFileClip(file)
 
-            # Calculate new dimensions while maintaining aspect ratio
-            new_height = 500
-            ratio = new_height / clip.size[1]
-            new_width = int(clip.size[0] * ratio)
+        #     # Calculate new dimensions while maintaining aspect ratio
+        #     new_height = 500
+        #     ratio = new_height / clip.size[1]
+        #     new_width = int(clip.size[0] * ratio)
 
-            # Resize video
-            resized_clip = clip.resize(height=new_height, width=new_width)
+        #     # Resize video
+        #     resized_clip = clip.resize(height=new_height, width=new_width)
             
-            # Remove audio
-            final_clip = resized_clip.without_audio()
+        #     # Remove audio
+        #     final_clip = resized_clip.without_audio()
 
-            # Export the final clip as MP4 (or any other desired format)
-            jpg_count += 1
-            output_path_mp4 = f'nails_by_dunja_post_{jpg_count}.mp4'
-            output_path_ogg = f'nails_by_dunja_post_{jpg_count}.ogg'
-            output_path_webm = f'nails_by_dunja_post_{jpg_count}.webm'
+        #     # Export the final clip as MP4 (or any other desired format)
+        #     jpg_count += 1
+        #     output_path_mp4 = f'nails_by_dunja_post_{jpg_count}.mp4'
+        #     output_path_ogg = f'nails_by_dunja_post_{jpg_count}.ogg'
+        #     output_path_webm = f'nails_by_dunja_post_{jpg_count}.webm'
             
-            video = f''' <video autoplay muted loop playsinline>
-                <source src="./posts/{output_path_webm}" type="video/webm">
-                <source src="./posts/{output_path_ogg}" type="video/ogg">
-                <source src="./posts/{output_path_mp4}" type="video/mp4">
-                Your browser does not support HTML5 video.
-                </video>'''
-            images.append(video)
-            final_clip.write_videofile(output_path_mp4, codec='libx264', audio_codec='aac')
-            final_clip.write_videofile(output_path_ogg, codec='libtheora', audio_codec='libvorbis')
-            final_clip.write_videofile(output_path_webm, codec='libvpx', audio_codec='libvorbis')
-            os.remove(file)
+        #     video = f''' <video autoplay muted loop playsinline>
+        #         <source src="./posts/{output_path_webm}" type="video/webm">
+        #         <source src="./posts/{output_path_ogg}" type="video/ogg">
+        #         <source src="./posts/{output_path_mp4}" type="video/mp4">
+        #         Your browser does not support HTML5 video.
+        #         </video>'''
+        #     images.append(video)
+        #     final_clip.write_videofile(output_path_mp4, codec='libx264', audio_codec='aac')
+        #     final_clip.write_videofile(output_path_ogg, codec='libtheora', audio_codec='libvorbis')
+        #     final_clip.write_videofile(output_path_webm, codec='libvpx', audio_codec='libvorbis')
+        #     os.remove(file)
         else :
             os.remove(file)
             print(f'Removed {file}')

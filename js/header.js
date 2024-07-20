@@ -14,5 +14,3 @@ function openSidebar() {
 function closeSidebar() {
     sidebar.classList.remove("open");
 }
-
-openSidebar();

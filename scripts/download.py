@@ -74,7 +74,7 @@ def clean_and_rename(folder_path):
             output_path_ogg = f'nails_by_dunja_post_{jpg_count}.ogg'
             output_path_webm = f'nails_by_dunja_post_{jpg_count}.webm'
             
-            video = f''' <video autoplay muted loop>
+            video = f''' <video autoplay muted loop playsinline>
                 <source src="./posts/{output_path_mp4}" type="video/mp4">
                  <source src="./posts/{output_path_ogg}" type="video/ogg">
                   <source src="./posts/{output_path_webm}" type="video/webm">

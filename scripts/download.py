@@ -76,14 +76,15 @@ def clean_and_rename(folder_path):
             
             video = f''' <video autoplay muted loop>
                 <source src="./posts/{output_path_mp4}" type="video/mp4">
-                 <source src="./posts/{output_path_mp4}" type="video/ogg">
-                  <source src="./posts/{output_path_mp4}" type="video/webm">
+                 <source src="./posts/{output_path_ogg}" type="video/ogg">
+                  <source src="./posts/{output_path_webm}" type="video/webm">
                 Your browser does not support HTML5 video.
                 </video>'''
             images.append(video)
             final_clip.write_videofile(output_path_mp4, codec='libx264', audio_codec='aac')
             final_clip.write_videofile(output_path_ogg, codec='libtheora', audio_codec='libvorbis')
-            final_clip.write_videofile(output_path_ogg, codec='libvpx', audio_codec='libvorbis')
+            final_clip.write_videofile(output_path_webm, codec='libvpx', audio_codec='libvorbis')
+            os.remove(file)
         else :
             os.remove(file)
             print(f'Removed {file}')

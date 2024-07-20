@@ -169,10 +169,7 @@ def replace_and_write(input_file, output_file, text):
 
     print(f"Created {output_file}")
 
-# download_all(posts_file_path)
-# clean_and_rename(posts_file_path)
-# os.chdir("..")
-
-
-    
+download_all(posts_file_path)
+clean_and_rename(posts_file_path)
+os.chdir("..") 
 replace_and_write("galerija_template.html", "galerija.html", "".join(images))

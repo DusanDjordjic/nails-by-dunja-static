@@ -22,6 +22,10 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/button.css" />
         <link rel="stylesheet" href="css/index.css" />
+        <script
+            src="https://kit.fontawesome.com/79417f2af1.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <header>
@@ -39,18 +43,55 @@
                                 <a href="#o-nama">O Nama</a>
                             </li>
                             <li>
+                                <a href="./galerija.html">Galerija</a>
+                            </li>
+                            <li>
                                 <a href="#kontakt">Kontakt</a>
                             </li>
                         </ul>
                     </nav>
                     <ul class="socials">
                         <li>
-                            <a href="">IG</a>
+                            <a class="icon-button" href="https://www.instagram.com/nails.by_dunja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                         </li>
                     </ul>
+                   <button id="open-sidebar" class="icon-button"><i class="fa-solid fa-bars"></i></button> 
                 </div>
+                </div> 
             </div>
         </header>
+        <aside id="sidebar">
+            <div class="sidebar_header">
+                <div class="header_layout">
+                    <a href="/" class="header_logo font-playwrite-300"
+                        >Nails By Dunja</a
+                    >
+                <button id="close-sidebar" class="icon-button"><i class="fa-sharp fa-solid fa-xmark"></i></button> 
+                </div>
+            </div>
+            <h3 class="font-playfair-700">Navigacija</h3>
+            <ul class="navigation">
+                <li>
+                    <a href="#usluge">Usluge</a>
+                </li>
+                <li>
+                    <a href="#o-nama">O Nama</a>
+                </li>
+                <li>
+                    <a href="./galerija.html">Galerija</a>
+                </li>
+                <li>
+                    <a href="#kontakt">Kontakt</a>
+                </li>
+            </ul>
+            <h3 class="font-playfair-700">Zapratite Me</h3>
+            <ul class="socials">
+                <li>
+                    <a class="icon-button" href="https://www.instagram.com/nails.by_dunja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+
+        </aside>
         <main>
             <section class="hero">
                 <div class="container">
@@ -58,16 +99,19 @@
                         <div class="hero_left">
                             <h1 class="font-playfair-700">
                                 Vaša Destinacija za Savršene Nokte
-                            </h1>
                             <h3>Profesionalna nega koja osvaja srca</h3>
                             <div>
-                                <a href="/" class="button">Zakazi termin</a>
+                                <a href="https://ig.me/m/nails.by_dunja" target="_blank" class="button">Zakazi termin</a>
                             </div>
+                        </div>
+                        <div class="hero_right">
+                            <img src="images/hero.jpg" alt="Nails By Dunja">
                         </div>
                     </div>
                 </div>
             </section>
         </main>
         <footer></footer>
+        <script  src="./js/header.js"></script>
     </body>
 </html>

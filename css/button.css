@@ -4,4 +4,13 @@
     text-decoration: none;
     border-radius: 0px;
     background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.icon-button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
 }

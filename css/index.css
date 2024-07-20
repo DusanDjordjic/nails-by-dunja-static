@@ -1,6 +1,5 @@
 .hero {
-    padding-top: 200px;
-    min-height: 100vh;
+    padding: 200px 0;
 }
 
 .hero_layout {
@@ -22,12 +21,10 @@
 .hero h1 {
     margin: 0;
     text-transform: uppercase;
-    font-size: 50px;
 }
 
 .hero h3 {
     margin: 0 0 32px;
-    font-size: 20px;
     font-weight: 400;
 }
 
@@ -35,8 +32,29 @@
     font-size: 20px;
 }
 
+.hero_right img {
+    display: block;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
 @media only screen and (min-width: 1000px) {
+    .hero {
+        min-height: 100vh;
+    }
+
     .hero_layout {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero_left {
+        margin-top: 32px;
+    }
+
+    .hero_right img {
+        max-height: unset;
+        aspect-ratio: 1;
     }
 }

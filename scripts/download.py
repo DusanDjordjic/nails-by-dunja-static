@@ -71,7 +71,7 @@ def clean_and_rename(folder_path):
             # Export the final clip as MP4 (or any other desired format)
             jpg_count += 1
             output_path = f'nails_by_dunja_post_{jpg_count}.mp4'
-            video = f' <video src="./posts/{output_path}" autoplay muted loop></video>'
+            video = f' <video src="./posts/{output_path}" autoplay muted loop type="video/mp4"></video>'
             images.append(video)
             final_clip.write_videofile(output_path, codec='libx264', audio_codec='aac')
         else :

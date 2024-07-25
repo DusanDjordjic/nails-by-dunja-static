@@ -1,7 +1,7 @@
 :root {
     --color-bg: #fff7fb;
     --color-text: #1d1c1c;
-    --color-primary: #ff4656;
+    --color-primary: #9e727c;
     --color-gray: #76585a;
 }
 
@@ -64,10 +64,10 @@ ol {
 }
 
 .font-playwrite-300 {
-    font-family: "Playwrite HR Lijeva", cursive;
+    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .poppins {

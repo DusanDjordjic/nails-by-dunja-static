@@ -76,7 +76,7 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -87,7 +87,7 @@ h3 {
         font-size: 28px;
     }
     h3 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .header_layout nav {
@@ -111,7 +111,7 @@ h3 {
         font-size: 32px;
     }
     h3 {
-        font-size: 24px;
+        font-size: 32px;
     }
 }
 

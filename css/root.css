@@ -35,38 +35,10 @@ ol {
     list-style: none;
 }
 
-.font-playfair-400 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.font-playfair-500 {
-    font-family: "Playfair Display", serif;
+.serif-display {
+    font-family: "DM Serif Display", serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-}
-
-.font-playfair-600 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.font-playfair-700 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.font-playwrite-300 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
 }
 

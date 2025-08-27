@@ -216,10 +216,13 @@ section.hero {
     color: var(--color-gray);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
     .contact__grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media only screen and (min-width: 1024px) {
     .contact__info {
         justify-content: center;
     }
